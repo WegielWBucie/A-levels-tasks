@@ -1,0 +1,3 @@
+C:/Users/pondr/Desktop/C++/UnemploymentRatio/cmake-build-debug/CMakeFiles/UnemploymentRatio.dir
+C:/Users/pondr/Desktop/C++/UnemploymentRatio/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/pondr/Desktop/C++/UnemploymentRatio/cmake-build-debug/CMakeFiles/rebuild_cache.dir

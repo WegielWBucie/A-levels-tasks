@@ -1,0 +1,278 @@
+        -:    0:Source:C:/Users/pondr/Desktop/C++/UnemploymentRatio/AnnualUnemployment.cpp
+        -:    0:Graph:C:\Users\pondr\Desktop\C++\UnemploymentRatio\cmake-build-debug-coverage\CMakeFiles\UnemploymentRatio.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\pondr\Desktop\C++\UnemploymentRatio\cmake-build-debug-coverage\CMakeFiles\UnemploymentRatio.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <fstream>
+        -:    3:#include <list>
+        -:    4:#include <vector>
+        -:    5:#include <map>
+        -:    6:
+        -:    7:
+        -:    8:using namespace std;
+        -:    9:
+        -:   10:class AnnualUnemployment {
+        -:   11:
+        -:   12:private:
+        -:   13:    vector<float>factors;
+        -:   14:
+        -:   15:public:
+function _ZN18AnnualUnemploymentC1ERSt6vectorIfSaIfEE called 71 returned 100% blocks executed 83%
+       71:   16:    AnnualUnemployment(vector<float> &factors) {
+       71:   16-block  0
+call    0 returned 71
+        -:   17:
+      923:   18:        for(float & factor : factors) {
+call    0 returned 71
+call    1 returned 71
+      852:   18-block  0
+call    2 returned 852
+      852:   18-block  1
+call    3 returned 852
+      923:   18-block  2
+call    4 returned 923
+branch  5 taken 852
+branch  6 taken 71 (fallthrough)
+      852:   19:            this->factors.push_back(factor);
+call    0 returned 852
+branch  1 taken 852 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:        }
+       71:   21:    }
+       71:   21-block  0
+    $$$$$:   21-block  1
+call    0 never executed
+        -:   22:
+function _ZN18AnnualUnemployment10getFactorsEv called 2730 returned 100% blocks executed 100%
+     2730:   23:    vector<float>getFactors() {
+     2730:   24:        return this->factors;
+     2730:   24-block  0
+call    0 returned 2730
+        -:   25:    }
+        -:   26:
+function _ZN18AnnualUnemployment28inputAnnualUnemplomentRatiosERSt3mapIiS_St4lessIiESaISt4pairIKiS_EEE called 1 returned 100% blocks executed 69%
+        1:   27:    static void inputAnnualUnemplomentRatios(map<int, AnnualUnemployment> &destinationMap) {
+        -:   28:
+        1:   29:        ifstream data;
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   30:        try {
+        1:   31:            data.open("E:/Informatyczka/ZADANKA/97/stopa_bezrobocia_dots.txt");
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:            if(!data.good()) {
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    #####:   33:                throw -1;
+    %%%%%:   33-block  0
+call    0 never executed
+call    1 never executed
+        -:   34:            }
+        -:   35:        }
+    =====:   36:        catch (int exception) {
+    $$$$$:   36-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   36-block  1
+call    2 never executed
+    =====:   37:            cout << "Wrong pathname !";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:   38:            exit(0);
+    $$$$$:   38-block  0
+call    0 never executed
+    =====:   39:        }
+    $$$$$:   39-block  0
+call    0 never executed
+        -:   40:
+        1:   41:        auto *firstLine = new string;
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+        1:   42:        getline(data, *firstLine);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   43:
+        1:   44:        cout << *firstLine << endl;
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45:        delete firstLine;
+        1:   45-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   45-block  1
+call    2 returned 1
+call    3 returned 1
+        -:   46:
+        -:   47:        int year;
+        -:   48:        float value;
+        1:   49:        vector<float>factorsVector;
+        1:   49-block  0
+call    0 returned 1
+       72:   50:        for(int j = 1945; j <= 2015; j++) {
+       71:   50-block  0
+       72:   50-block  1
+branch  0 taken 71
+branch  1 taken 1 (fallthrough)
+       71:   51:            data >> year;
+       71:   51-block  0
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   52:            cout << year << "\t";
+       71:   52-block  0
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   52-block  1
+call    3 returned 71
+branch  4 taken 71 (fallthrough)
+branch  5 taken 0 (throw)
+      923:   53:            for (int i = 0; i < 12; i++) {
+       71:   53-block  0
+      852:   53-block  1
+      923:   53-block  2
+branch  0 taken 852
+branch  1 taken 71 (fallthrough)
+      852:   54:                data >> value;
+      852:   54-block  0
+call    0 returned 852
+branch  1 taken 852 (fallthrough)
+branch  2 taken 0 (throw)
+      852:   55:                factorsVector.push_back(value);
+      852:   55-block  0
+call    0 returned 852
+branch  1 taken 852 (fallthrough)
+branch  2 taken 0 (throw)
+      852:   56:                cout << factorsVector[i] << "\t";
+      852:   56-block  0
+call    0 returned 852
+call    1 returned 852
+branch  2 taken 852 (fallthrough)
+branch  3 taken 0 (throw)
+      852:   56-block  1
+call    4 returned 852
+branch  5 taken 852 (fallthrough)
+branch  6 taken 0 (throw)
+        -:   57:            }
+       71:   58:            cout << endl;
+       71:   58-block  0
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   59:            auto *annualUnemployment = new AnnualUnemployment(factorsVector);
+       71:   59-block  0
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   59-block  1
+call    3 returned 71
+branch  4 taken 71 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   59-block  2
+call    6 never executed
+       71:   60:            factorsVector.clear();
+       71:   60-block  0
+call    0 returned 71
+       71:   61:            destinationMap.insert(pair<int, AnnualUnemployment>(year, *annualUnemployment));
+call    0 returned 71
+branch  1 taken 71 (fallthrough)
+branch  2 taken 0 (throw)
+       71:   61-block  0
+call    3 returned 71
+branch  4 taken 71 (fallthrough)
+branch  5 taken 0 (throw)
+       71:   61-block  1
+call    6 returned 71
+    $$$$$:   61-block  2
+call    7 never executed
+    $$$$$:   61-block  3
+       71:   62:            delete annualUnemployment;
+branch  0 taken 71 (fallthrough)
+branch  1 taken 0
+       71:   62-block  0
+call    2 returned 71
+call    3 returned 71
+        -:   63:        }
+        1:   64:    }
+        1:   64-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   64-block  1
+call    2 never executed
+    $$$$$:   64-block  2
+call    3 never executed
+        -:   65:
+function _ZN18AnnualUnemployment22showAnnualUnemploymentERSt3mapIiS_St4lessIiESaISt4pairIKiS_EEE called 1 returned 100% blocks executed 95%
+        1:   66:    static void showAnnualUnemployment(map<int, AnnualUnemployment> &destinationVector) {
+        -:   67:
+       71:   68:        for(const auto& year: destinationVector) {
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+       70:   68-block  1
+call    2 returned 70
+       70:   68-block  2
+call    3 returned 70
+       71:   68-block  3
+call    4 returned 71
+branch  5 taken 70
+branch  6 taken 1 (fallthrough)
+       70:   69:            cout << year.first << "\t";
+call    0 returned 70
+branch  1 taken 70 (fallthrough)
+branch  2 taken 0 (throw)
+       70:   69-block  0
+call    3 returned 70
+branch  4 taken 70 (fallthrough)
+branch  5 taken 0 (throw)
+      910:   70:            for(float value : year.second.factors) {
+       70:   70-block  0
+call    0 returned 70
+call    1 returned 70
+      840:   70-block  1
+call    2 returned 840
+      840:   70-block  2
+call    3 returned 840
+      910:   70-block  3
+call    4 returned 910
+branch  5 taken 840
+branch  6 taken 70 (fallthrough)
+      840:   71:                cout << value << "\t";
+call    0 returned 840
+branch  1 taken 840 (fallthrough)
+branch  2 taken 0 (throw)
+      840:   71-block  0
+call    3 returned 840
+branch  4 taken 840 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   72:            }
+       70:   73:            cout << endl;
+       70:   73-block  0
+call    0 returned 70
+branch  1 taken 70 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   74:        }
+        1:   75:    }
+        1:   75-block  0
+        -:   76:};
