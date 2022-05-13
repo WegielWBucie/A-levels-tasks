@@ -28,7 +28,7 @@ public:
 
         ifstream data;
         try {
-            data.open("E:/Informatyczka/ZADANKA/97/stopa_bezrobocia_dots.txt");
+            data.open("stopa_bezrobocia_dots.txt");
             if(!data.good()) {
                 throw -1;
             }
