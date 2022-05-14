@@ -37,7 +37,7 @@ public:
     static void inputEnters(vector<Enter>&destination, map<int, Enter>&destinationMap) {
 
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/101/wejscia.txt");
+        data.open("wejscia.txt");
         auto *headers = new string;
         getline(data, *headers);
         delete headers;
