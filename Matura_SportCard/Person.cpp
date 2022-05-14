@@ -38,7 +38,7 @@ public:
     static void inputPeople(vector<Person>&destination, map<int, Person> &destinationMap) {
 
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/101/osoby.txt");
+        data.open("osoby.txt");
         auto *headers = new string;
         getline(data, *headers);
         delete headers;
