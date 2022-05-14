@@ -37,7 +37,7 @@ public:
     static void inputActivities(vector<Activity>&destination, map<int, Activity>&destinationMap) {
 
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/101/zajecia.txt");
+        data.open("zajecia.txt");
         auto *headers = new string;
         getline(data, *headers);
         delete headers;
