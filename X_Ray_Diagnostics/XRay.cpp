@@ -24,7 +24,7 @@ public:
 
     static void inputXRays(map<string, XRay>&xRays) {
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/103/rtg.txt");
+        data.open("rtg.txt");
 
         auto *headers = new string;
         getline(data, *headers);
