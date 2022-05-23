@@ -22,7 +22,7 @@ public:
 
     static void inputExaminations(map<string, list<Examination>>&examinations) {
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/103/badania.txt");
+        data.open("badania.txt");
         auto *headers = new string;
         getline(data, *headers);
         delete headers;
