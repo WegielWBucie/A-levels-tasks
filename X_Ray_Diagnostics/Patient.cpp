@@ -36,7 +36,7 @@ public:
 
     static void inputPatients(map<string, Patient>&patients) {
         ifstream data;
-        data.open("E:/Informatyczka/ZADANKA/103/pacjenci.txt");
+        data.open("pacjenci.txt");
         auto *headers = new string;
         getline(data, *headers);
         delete headers;
